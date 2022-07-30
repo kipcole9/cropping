@@ -32,6 +32,9 @@ defmodule Cropping do
         [r, g, b] = Image.Color.rgb_color(color)
         color = [r, g, b, @opaqu]
 
+        # This is a low level API call. In an updated version
+        # of Image I will add a function Image.draw but this
+        # function will still remain
         :ok = Vix.Vips.MutableImage.draw_circle(mutable_image, color, x, y, @radius, fill: true)
       end)
     end
