@@ -24,3 +24,6 @@ cropping-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Iamge files
+*.png
