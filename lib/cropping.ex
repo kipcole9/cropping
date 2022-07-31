@@ -4,6 +4,7 @@ defmodule Cropping do
   @opaqu 255
   @transparent 0
   @transparent_white [255, 255, 255, @transparent]
+  @bands length(@transparent_white)
   @radius 3
 
   @doc """
@@ -20,7 +21,7 @@ defmodule Cropping do
     image_height = trunc(image_width * max_height / max_width)
 
     # Create a base image
-    {:ok, image} = Image.new(image_width, image_height, bands: length(@transparent_white), color: @transparent_white)
+    {:ok, image} = Image.new(image_width, image_height, bands: @bands, color: @transparent_white)
 
     # For each row in the stream, plot its value with the
     # required color, making sure the color is opaque.
