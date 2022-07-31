@@ -1,8 +1,8 @@
 %{
   "elixir_make": {:hex, :elixir_make, "0.6.3", "bc07d53221216838d79e03a8019d0839786703129599e9619f4ab74c8c096eac", [:mix], [], "hexpm", "f5cbd651c5678bcaabdbb7857658ee106b12509cd976c2c2fca99688e1daf716"},
-  "image": {:git, "https://github.com/kipcole9/image.git", "99ffcf62e91d66f9324a7fff12f18f0b8aa73cb8", [branch: "draw"]},
+  "image": {:git, "https://github.com/kipcole9/image.git", "52930b0a4e225fb5f93e711a1317ca5be7916095", [branch: "draw"]},
   "nimble_csv": {:hex, :nimble_csv, "1.2.0", "4e26385d260c61eba9d4412c71cea34421f296d5353f914afe3f2e71cce97722", [:mix], [], "hexpm", "d0628117fcc2148178b034044c55359b26966c6eaa8e2ce15777be3bbc91b12a"},
   "phoenix_html": {:hex, :phoenix_html, "3.2.0", "1c1219d4b6cb22ac72f12f73dc5fad6c7563104d083f711c3fcd8551a1f4ae11", [:mix], [{:plug, "~> 1.5", [hex: :plug, repo: "hexpm", optional: true]}], "hexpm", "36ec97ba56d25c0136ef1992c37957e4246b649d620958a1f9fa86165f8bc54f"},
   "sweet_xml": {:hex, :sweet_xml, "0.7.3", "debb256781c75ff6a8c5cbf7981146312b66f044a2898f453709a53e5031b45b", [:mix], [], "hexpm", "e110c867a1b3fe74bfc7dd9893aa851f0eed5518d0d7cad76d7baafd30e4f5ba"},
-  "vix": {:git, "https://github.com/kipcole9/vix.git", "85c04101d8f09ff4f0695b7d733fff490f32e03a", [branch: "draw"]},
+  "vix": {:git, "https://github.com/kipcole9/vix.git", "dd21b447736c2b4acd2f0227c2cb7d6c647189a0", [branch: "draw"]},
 }
