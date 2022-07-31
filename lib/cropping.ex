@@ -14,11 +14,11 @@ defmodule Cropping do
   """
   def plot(stream, image_width \\ 2000) do
     # Get the range of the original data
-    {max_width, max_height} = data_range()
+    {max_x, max_y} = data_range()
 
     # Using the original data, establish what the
     # height needs to be to preserve the ratio
-    image_height = trunc(image_width * max_height / max_width)
+    image_height = trunc(image_width * max_y / max_x)
 
     # Create a base image
     {:ok, image} = Image.new(image_width, image_height, bands: @bands, color: @transparent_white)
@@ -27,8 +27,8 @@ defmodule Cropping do
     # required color, making sure the color is opaque.
     Image.mutate image, fn mutable_image ->
       Enum.each(stream, fn [x, y, color] ->
-        x = String.to_integer(x) |> convert_to_range(image_width, max_width)
-        y = String.to_integer(y) |> convert_to_range(image_height, max_height)
+        x = String.to_integer(x) |> convert_to_range(image_width, max_x)
+        y = String.to_integer(y) |> convert_to_range(image_height, max_y)
         [r, g, b] = Image.Color.rgb_color(color)
         color = [r, g, b, @opaqu]
 
